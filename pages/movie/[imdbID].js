@@ -11,9 +11,9 @@ const Movie = ({ movie }) => {
                 </div>
             </Link>
             <div className="bg-gray-light p-8">
-                <div className="bg-red-300 p-8 flex">
-                    <img className="p-2 border-black border-2 border-solid" src={movie.Poster} alt={movie.Title} />
-                    <div className="mx-10 border-black border-2 border-solid p-4">
+                <div className="bg-green-200 p-8 flex">
+                    <img className="p-2 bg-red-400 border-black border-2 border-solid" src={movie.Poster} alt={movie.Title} />
+                    <div className="mx-10 border-red-400 border-4 border-solid p-4">
                         <h1 className="text-4xl px-4 bg-black text-red-400">{`${movie.Title} (${movie.Year})`}</h1>
                         <div className="mt-4 flex">
                             <span className="px-3 flex-grow text-center border-solid border-black border-r-2 border-l-2">{(movie.Type).toUpperCase()}</span>
@@ -21,9 +21,9 @@ const Movie = ({ movie }) => {
                             <span className="px-3 flex-grow text-center border-solid border-black border-r-2">{movie.Runtime}</span>
                             <span className="px-3 flex-grow text-center border-solid border-black border-r-2">{movie.Language}</span>
                         </div>
-                        <div className="my-2">
-                            <span><b>IMDB:</b> {movie.imdbRating} </span>
-                            <span className="float-right"><b>Rotten Tomatoes:</b> {movie.Ratings[1].Value}</span>
+                        <div className="my-3">
+                            <span><b className="bg-yellow-500 p-1 mr-4">IMDB:</b><b>{movie.imdbRating}</b> </span>
+                            <span className="float-right"><b className="bg-orange-500 p-1 mr-4">Rotten Tomatoes:</b><b>{movie.Ratings[1].Value}</b></span>
                         </div>
                         <p className="my-2 mt-8">{movie.Plot}</p>
                         <table className="mt-8">

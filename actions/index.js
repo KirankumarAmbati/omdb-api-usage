@@ -13,3 +13,11 @@ export const setPage = (store, page) => {
 export const setTotalResults = (store, totalResults) => {
     store.setState({ totalResults })
 }
+
+export const setType = (store, type) => {
+    store.setState({ type })
+}
+
+export const setYear = (store, year) => {
+    store.setState({ year })
+}
