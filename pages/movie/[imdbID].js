@@ -78,7 +78,7 @@ const Movie = ({ movie }) => {
 }
 
 Movie.getInitialProps = async function ({ query }) {
-    const res = await fetch(`http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&i=${query.imdbID}`)
+    const res = await fetch(`http://www.omdbapi.com/?apikey=e2c59e64&i=${query.imdbID}`)
     const data = await res.json()
 
     return {

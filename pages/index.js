@@ -68,7 +68,7 @@ const Index = () => {
 }
 
 function getMoviesBySearch(searchText, setMovies, setTotalResults, page) {
-    fetch(`http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&s=${searchText}&page=${page}`)
+    fetch(`http://www.omdbapi.com/?apikey=e2c59e64&s=${searchText}&page=${page}`)
         .then(response => response.json())
         .then(data => {
             setMovies(data.Search)
