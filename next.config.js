@@ -4,8 +4,7 @@ const webpack = require('webpack')
 
 module.exports = withCSS({
     webpack(config) {
-        config.plugins.push(new webpack.EnvironmentPlugin(localEnv))
-    
+        config.plugins.push(new webpack.EnvironmentPlugin(['OMDB_API_KEY']))    
         return config
       }
 })
