@@ -1,5 +1,5 @@
 # omdb-api-usage
-An application using OMDB API. Live: 
+An application using OMDB API. Live: https://omdb-api-usage.herokuapp.com
 
 To run:
 
