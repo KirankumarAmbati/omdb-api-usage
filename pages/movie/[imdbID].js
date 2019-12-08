@@ -1,12 +1,15 @@
 import React from 'react'
 import fetch from 'isomorphic-unfetch'
+import Link from 'next/link'
 
 const Movie = ({ movie }) => {
     return (
         <>
-            <div className="bg-red-300">
-                <span className="text-4xl px-2 bg-yellow-400 mx-4 rounded">OMDB</span>
-            </div>
+            <Link href="/">
+                <div className="bg-red-400 cursor-pointer">
+                    <span className="text-4xl px-2 bg-yellow-400 mx-4 rounded">OMDB</span>
+                </div>
+            </Link>
             <div className="bg-gray-light p-8">
                 <div className="bg-red-300 p-8 flex">
                     <img className="p-2 border-black border-2 border-solid" src={movie.Poster} alt={movie.Title} />
@@ -73,12 +76,12 @@ const Movie = ({ movie }) => {
 }
 
 Movie.getInitialProps = async function ({ query }) {
-    const res = await fetch(`http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&i=${query.imdbID}`);
-    const data = await res.json();
+    const res = await fetch(`http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&i=${query.imdbID}`)
+    const data = await res.json()
 
     return {
         movie: data
-    };
-};
+    }
+}
 
 export default Movie
